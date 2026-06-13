@@ -1,15 +1,18 @@
 import { useState } from 'react'
-import { Plus, BookOpen } from 'lucide-react'
+import { Plus } from 'lucide-react'
 import useListStore from '../store/useListStore'
 import ListCard from '../components/lists/ListCard'
 import NewListModal from '../components/lists/NewListModal'
+import HomeTabNav from '../components/layout/HomeTabNav'
 
 export default function ListsHome() {
   const lists = useListStore(s => s.lists)
   const [showModal, setShowModal] = useState(false)
 
   return (
-    <div className="min-h-full px-4 pt-6 pb-32 md:pb-8">
+    <div className="min-h-full px-4 pt-6 pb-8">
+      <HomeTabNav />
+
       {/* Header */}
       <div className="flex items-end justify-between mb-6">
         <div>

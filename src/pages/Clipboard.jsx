@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import { Pin } from 'lucide-react'
 import useClipboardStore from '../store/useClipboardStore'
 import PinCard from '../components/clipboard/PinCard'
 import AddPinBar from '../components/clipboard/AddPinBar'
+import HomeTabNav from '../components/layout/HomeTabNav'
 
 const TYPE_FILTERS = [
   { key: null, label: 'All' },
@@ -26,7 +26,9 @@ export default function Clipboard() {
   })
 
   return (
-    <div className="min-h-full px-4 pt-6 pb-32 md:pb-8">
+    <div className="min-h-full px-4 pt-6 pb-8">
+      <HomeTabNav />
+
       {/* Header */}
       <div className="flex items-end justify-between mb-5">
         <div>
