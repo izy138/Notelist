@@ -5,8 +5,10 @@ import ListDetail from './pages/ListDetail'
 import Clipboard from './pages/Clipboard'
 
 export default function App() {
+  const basename = import.meta.env.BASE_URL.replace(/\/$/, '')
+
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <div className="flex min-h-screen">
         {/* Desktop sidebar spacer */}
         <div className="hidden md:block w-56 flex-shrink-0" />
