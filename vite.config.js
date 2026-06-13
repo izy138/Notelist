@@ -6,13 +6,16 @@ import { join } from 'node:path'
 
 export default defineConfig({
   base: '/Notelist/',
+  build: {
+    outDir: 'docs',
+  },
   plugins: [
     react(),
     tailwindcss(),
     {
       name: 'copy-404',
       closeBundle() {
-        copyFileSync(join('dist', 'index.html'), join('dist', '404.html'))
+        copyFileSync(join('docs', 'index.html'), join('docs', '404.html'))
       },
     },
   ],
